@@ -1,0 +1,124 @@
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="DiseñoFormulario.css">
+  <title> Formulario tenis </title>
+</head>
+
+
+<body>
+<form action="URL absoluta o relativa" method="get o post">
+ <h2>Reserva de Pista</h2>
+ <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+  
+ <fieldset>
+  <legend>Datos personales</legend>
+   
+  <p>
+   <label for="name_id">Nombre:</label><br>
+   <!-- Campo de texto con un input: Este esta relacionado con        tu label: lo identificas conjuntamente : name_id-->
+   <input type= "text" name="name_id" /> 
+  </p>
+   
+  <p>
+   <label for="phone_id">Teléfono:</label><br>
+   <!-- Campo de teléfono -->
+    <input type= "tel" name="phone_id" />
+  </p> 
+  
+  <p>
+   <label for="email_id">Email:</label><br>
+   <!-- Campo de email obligatorio -->
+    <input type= "email" name="email_id" required />   
+  </p>
+     <p>¿Eres socio?:
+   <ul>
+    <li>
+     <!-- Opción excluyente obligatoria -->
+     <input type="radio" name="size" value="Sí" required/>
+     <label for="size">Sí</label>        
+    </li>
+     
+    <li>
+     <!-- Opción excluyente obligatoria -->
+     <input type="radio" name="size" value="No" required/>
+     <label for="size-2_id">No</label>
+    </li>
+     
+  
+   </ul>
+  </p>
+  
+   
+ </fieldset>  
+ <fieldset>
+  <legend>Pista</legend>
+   
+
+    
+    <p>
+    <label for="fecha">Fecha:</label><br>
+     <!-- Campo de fecha con valor minimo la fecha de hoy -->
+    <input type="date" name="fecha" min="<?=date('Y-m-d') ?>"/>
+     </p>
+   
+    <p>
+     <label for="amount">Tiempo de juego:</label><br>
+     <input type="number" name="amount" min="1" max="3" required/>
+     </p>
+   
+   <p>
+   <label for="model_id">Elija:</label><br>
+
+      <select name="model" required>
+        <option value="">-- Opciones de pistas:--</option>
+        <option value="modelo_1"> Pista 1 (resina)</option>
+        <option value="modelo_2"> Pista 2 (resina) </option>
+        <option value="modelo_3"> Pista 3 (resina) </option>
+        <option value="modelo_3"> Pista 4 (resina) </option>             
+        <option value="modelo_3"> Pista 5 (resina) </option>
+        <option value="modelo_3"> Pista 6 (resina) </option>
+        <option value="modelo_3"> Pista 7 (resina) </option>
+        <option value="modelo_3"> Pista 8 (resina) </option>
+        <option value="modelo_3"> Pista 9 (resina) </option>
+        <option value="modelo_3"> Pista 10 (resina) </option>
+        <option value="modelo_1"> Pista 11 (resina)</option>
+        <option value="modelo_2"> Pista 12 (resina) </option>
+        <option value="modelo_3"> Pista 13 (resina) </option>
+        <option value="modelo_3"> Pista 14 (resina) </option>           
+        <option value="modelo_3"> Pista 15 (resina) </option>
+        <option value="modelo_3"> Pista 16 (resina) </option>
+        <option value="modelo_3"> Pista 17 (quick) </option>
+        <option value="modelo_3"> Pista 18 (quick) </option>
+        <option value="modelo_3"> Pista 19 (quick) </option>
+        <option value="modelo_3"> Pista 20 (quick) </option>
+        <option value="modelo_3"> Pista 21 (resina) </option>
+        <option value="modelo_3"> Pista 22 (resina) </option>
+        <option value="modelo_3"> Pista 23 (resina) </option>
+        <option value="modelo_3"> Pista 24 (resina) </option>
+        <option value="modelo_3"> Pista 25 (resina) </option>
+    </select>
+  </p>
+  
+
+  
+ </fieldset>
+ <fieldset>
+  <!-- Botón para enviar -->
+
+   <button type="submit"> Enviar </button>
+  
+  <!-- Botón para resetear el formulario -->
+
+   <button type="reset">Reset</button>
+   
+ </fieldset>
+</form>
+</body>
+
+</html>
